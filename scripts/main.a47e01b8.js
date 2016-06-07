@@ -1,0 +1,1 @@
+"use strict";$(document).ready(function(){$("#fullpage").fullpage({anchors:["Welcome","About","Work"],menu:"#menu",navigation:!1,scrollOverflow:!0,loopTop:!0}),$(".down").click($.fn.fullpage.moveSectionDown),$(".left").click($.fn.fullpage.moveSlideRight)});
