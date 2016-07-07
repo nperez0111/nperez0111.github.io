@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="/bower_components/fullpage.js/jquery.fullPage.css" />
     <!-- endbower -->
     <!-- endbuild -->
-    <!-- build:css(.) styles/main.css -->
+    <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
@@ -28,10 +28,13 @@
     <![endif]-->
     <nav id="menu">
         <ul>
-            <li data-menuanchor="Welcome" class="active"><a href="#Welcome">Home</a></li>
+            <li data-menuanchor="Welcome" class="active"><a href="#Welcome">Home</a>
+            </li>
             <!--<li data-menuanchor="Page2"><a href="#Page2">Page 2</a></li>-->
-            <li data-menuanchor="About"><a href="#About">About</a></li>
-            <li data-menuanchor="Work"><a href="#Work">My Work</a></li>
+            <li data-menuanchor="About"><a href="#About">About</a>
+            </li>
+            <li data-menuanchor="Work"><a href="#Work">My Work</a>
+            </li>
         </ul>
     </nav>
 
@@ -71,8 +74,8 @@
                         <a href="http://HalMiles.com" class="browser image">
                             <picture>
                                 <source srcset="images/halBig.png" media="(min-width: 1000px)">
-                                <source srcset="images/halMed.png" media="(min-width: 800px)">
-                                <img srcset="images/halSmall.png" alt="Hal Miles' Portfolio site layout">
+                                    <source srcset="images/halMed.png" media="(min-width: 800px)">
+                                        <img srcset="images/halSmall.png" alt="Hal Miles' Portfolio site layout">
                             </picture>
                         </a>
                         <figcaption>
@@ -88,8 +91,8 @@
                         <a href="http://ImagimationStudios.com" class="browser image">
                             <picture>
                                 <source srcset="images/ImagBig.png" media="(min-width: 1000px)">
-                                <source srcset="images/ImagMed.png" media="(min-width: 800px)">
-                                <img srcset="images/ImagSmall.png" alt="Imagimation Studios Site layout">
+                                    <source srcset="images/ImagMed.png" media="(min-width: 800px)">
+                                        <img srcset="images/ImagSmall.png" alt="Imagimation Studios Site layout">
                             </picture>
                         </a>
                         <figcaption>
@@ -105,8 +108,8 @@
                         <a href="http://NickTheSick.com/BlueMessProductions/" class="browser image">
                             <picture>
                                 <source srcset="images/large.jpg" media="(min-width: 1000px)">
-                                <source srcset="images/medium.jpg" media="(min-width: 800px)">
-                                <img srcset="images/small.jpg" alt="Image of the design mockup of the Blue Mess Productions website.">
+                                    <source srcset="images/medium.jpg" media="(min-width: 800px)">
+                                        <img srcset="images/small.jpg" alt="Image of the design mockup of the Blue Mess Productions website.">
                             </picture>
                         </a>
                         <figcaption>
@@ -122,8 +125,8 @@
                         <a href="http://Sas.NickTheSick.com/" class="browser image">
                             <picture>
                                 <source srcset="images/sasBig.jpg" media="(min-width: 1000px)">
-                                <source srcset="images/sasMed.jpg" media="(min-width: 800px)">
-                                <img srcset="images/sasSmall.jpg" alt="Image of the School for advanced Studies Web App to choose courses within Miami Dade College just a little simpler.">
+                                    <source srcset="images/sasMed.jpg" media="(min-width: 800px)">
+                                        <img srcset="images/sasSmall.jpg" alt="Image of the School for advanced Studies Web App to choose courses within Miami Dade College just a little simpler.">
                             </picture>
                         </a>
                         <figcaption>
@@ -140,8 +143,8 @@
                         <a href="http://Onswee.NickTheSick.com/" class="browser image">
                             <picture>
                                 <source srcset="images/onsweeBig.png" media="(min-width: 1000px)">
-                                <source srcset="images/onsweeMed.png" media="(min-width: 800px)">
-                                <img srcset="images/onsweeSmall.png" alt="Image of a Tic Tac Toe like game where you are able to move the pieces implemented with AI or multiplayer support.">
+                                    <source srcset="images/onsweeMed.png" media="(min-width: 800px)">
+                                        <img srcset="images/onsweeSmall.png" alt="Image of a Tic Tac Toe like game where you are able to move the pieces implemented with AI or multiplayer support.">
                             </picture>
                         </a>
                         <figcaption>
@@ -159,8 +162,8 @@
                         <a href="http://Weather.NickTheSick.com/" class="browser image">
                             <picture>
                                 <source srcset="images/NOAABig.png" media="(min-width: 1000px)">
-                                <source srcset="images/NOAAMed.png" media="(min-width: 800px)">
-                                <img srcset="images/NOAASmall.png" alt="Image of a Tic Tac Toe like game where you are able to move the pieces implemented with AI or multiplayer support.">
+                                    <source srcset="images/NOAAMed.png" media="(min-width: 800px)">
+                                        <img srcset="images/NOAASmall.png" alt="Image of a Tic Tac Toe like game where you are able to move the pieces implemented with AI or multiplayer support.">
                             </picture>
                         </a>
                         <figcaption>
@@ -198,21 +201,21 @@
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
-        (function (b, o, i, l, e, r) {
-            b.GoogleAnalyticsObject = l;
-            b[l] || (b[l] =
-                function () {
-                    (b[l].q = b[l].q || []).push(arguments)
-                });
-            b[l].l = +new Date;
-            e = o.createElement(i);
-            r = o.getElementsByTagName(i)[0];
-            e.src = 'https://www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e, r)
-        }(window, document, 'script', 'ga'));
-        ga('create', 'UA-61069332-1');
-        ga('require', 'linkid');
-        ga('send', 'pageview');
+    (function(b, o, i, l, e, r) {
+        b.GoogleAnalyticsObject = l;
+        b[l] || (b[l] =
+            function() {
+                (b[l].q = b[l].q || []).push(arguments)
+            });
+        b[l].l = +new Date;
+        e = o.createElement(i);
+        r = o.getElementsByTagName(i)[0];
+        e.src = 'https://www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e, r)
+    }(window, document, 'script', 'ga'));
+    ga('create', 'UA-61069332-1');
+    ga('require', 'linkid');
+    ga('send', 'pageview');
     </script>
 </body>
 
