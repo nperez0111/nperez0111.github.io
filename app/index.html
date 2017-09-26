@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Nick The Sick's Portfolio Site</title>
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Abril+Fatface' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <!-- Place favicon.ico in the root directory -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body>
+  <!--[if IE]>
+      <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-8 align-self-center">
+        <ul class="nav nav-pills" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" href="#websites" role="tab" data-toggle="tab">Websites</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#webapps" role="tab" data-toggle="tab">Web Apps</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#npm" role="tab" data-toggle="tab">NPM Modules</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#scripts" role="tab" data-toggle="tab">Scripts &amp; Utilities</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-4 align-self-center meComponent">
+        <div class="text-center"><img src="images/me.jpg" alt="A Picture of me, Nicholas Perez" class="img-thumbnail profile-image">
+          <h2 class="text-center">Nicholas Perez</h2>
+          <p class="lead">To create software that makes people wonder how they ever lived without it, is my goal.</p>
+        </div>
+      </div>
+    </div>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade active show" id="websites">
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="webapps">
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="npm">
+      </div>
+      <div role="tabpanel" class="tab-pane fade" id="scripts">
+        <div class="card-columns" id='scriptsContent'></div>
+      </div>
+    </div>
+  </div>
+  <div class="footer">
+    <p>Made by Nick the Sick</p>
+  </div>
+  </div>
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <script>
+  (function(b, o, i, l, e, r) {
+    b.GoogleAnalyticsObject = l;
+    b[l] || (b[l] =
+      function() {
+        (b[l].q = b[l].q || []).push(arguments)
+      });
+    b[l].l = +new Date;
+    e = o.createElement(i);
+    r = o.getElementsByTagName(i)[0];
+    e.src = 'https://www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e, r)
+  }(window, document, 'script', 'ga'));
+  ga('create', 'UA-XXXXX-X');
+  ga('send', 'pageview');
+
+  </script>
+  <script type="text/ractive" id='browserTemplate'>
+    <div class="row">
+      <div class="browser col-8">
+        <div class="browser-header">
+          <div class="browser-btns">
+            <div class="browser-btn closer"></div>
+            <div class="browser-btn retract"></div>
+            <div class="browser-btn expand"></div>
+          </div>
+          <ul class="tabs">
+            {{#each page:i}}
+            <li class="tab {{i==current?'activer':''}}" on-click="goto(i)">{{#if faIcon}}<i class="fa fa-{{faIcon}}"></i>{{/if}} {{title}}<span class="closer">x</span></li>
+            {{/each}}
+          </ul>
+        </div>
+        <div class="browser-bar">
+          <div class="button" on-click='goto(past)'><i class="fa fa-arrow-left"></i></div>
+          <div class="button inactiver"><i class="fa fa-arrow-right"></i></div>
+          <div class="button"><i class="fa fa-rotate-right"></i></div>
+          <input class="address" value="{{page[current].link}}" />
+          <div class="button" on-click="alert(`You thought this actually worked???\nThat's funny`)"><i class="fa fa-bars"></i></div>
+        </div>
+        <div class="page">
+          {{{page[current].html}}} {{#if current==0}}
+          <button class="btn btn-primary mt-0" on-click="goto(1)">View next Website <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+          {{/if}}
+        </div>
+      </div>
+      <div class="col-4 px-4 card-holder">
+        <Card title="{{{page[current].title}}}" subtitle="{{{page[current].subtitle}}}" text="{{{page[current].text}}}" tags="{{page[current].tags}}" link="{{page[current].projectURL}}" />
+        <button type="button" class='btn btn-primary mt-3' on-click="goto(current+1)">View next website <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+      </div>
+    </div>
+  </script>
+  <script type="text/ractive" id='cardTemplate'>
+    <div class="card">
+      <div class="card-block">
+        {{#if title&&title!=='false'}}
+        <h4 class="card-title">{{title}}</h4>{{/if}} {{#if subtitle&&subtitle!=='false'}}
+        <h6 class="card-subtitle mb-2 text-muted">{{{subtitle}}}</h6>{{/if}}
+        <p class="card-text">{{{text}}}</p>
+        {{#if link&&link!=='false'}}<a href="{{link}}" class="btn btn-primary float-right">
+                  See the Project <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>{{/if}}
+      </div>
+      {{#if tags&&tags!=='false'}}
+      <div class="card-footer">
+        <small class="text-muted">Tags :</small> {{#each tags}} <span class='btn btn-outline-primary btn-sm m-1'>{{this}}</span> {{/each}}
+      </div>
+      {{/if}}
+    </div>
+  </script>
+  <script type="text/ractive" id='npmTemplate'>
+    <div class="card-columns" id="npm">
+      {{#each items}}
+      <Card title={{{title}}} subtitle={{{subtitle}}} text={{{text}}} link={{{link}}} tags={{tags}}>
+        {{/each}}
+    </div>
+  </script>
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="/bower_components/jquery/dist/jquery.js"></script>
+  <script src="/bower_components/ractive/ractive.min.js"></script>
+  <script src="/bower_components/popper.js/dist/umd/popper.js"></script>
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:js scripts/plugins.js -->
+  <script src="/bower_components/bootstrap/js/dist/util.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/alert.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/button.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/carousel.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/collapse.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/dropdown.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/modal.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/tab.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/tooltip.js"></script>
+  <script src="/bower_components/bootstrap/js/dist/popover.js"></script>
+  <!-- endbuild -->
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/text.js"></script>
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

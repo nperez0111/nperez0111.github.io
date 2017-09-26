@@ -1,0 +1,132 @@
+// bower:scss
+@import "bower_components/bootstrap/scss/bootstrap.scss";
+// endbower
+@import "./glyphicons.scss";
+@import "./browserView.scss";
+@import "./animation.scss";
+.profile-image {
+  border-radius: 50%;
+  max-width: 300px;
+}
+
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+.card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
+
+.card-block {
+  padding: 15px;
+}
+
+.card-title {
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+picture {
+  width: 100%;
+  img,
+  source {
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Space out content a bit */
+
+body {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Everything but the jumbotron gets side spacing for mobile first views */
+
+.header,
+.marketing,
+.footer {
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Custom page footer */
+
+.footer {
+  padding-top: 1.5rem;
+  color: #777;
+  border-top: .05rem solid #e5e5e5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Customize container */
+
+@media (min-width: 48em) {
+  .container {
+    max-width: 46rem;
+  }
+}
+
+.container-narrow>hr {
+  margin: 2rem 0;
+}
