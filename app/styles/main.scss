@@ -6,7 +6,7 @@
 @import "./animation.scss";
 .profile-image {
   border-radius: 50%;
-  max-width: 300px;
+  max-width: 250px;
 }
 
 .browserupgrade {
@@ -42,6 +42,23 @@ picture {
   }
 }
 
+.center {
+  margin: 0 auto;
+}
+
+.github {
+  font-size: 4rem !important;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -58,6 +75,15 @@ body {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,6 +123,15 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
 /* Custom page footer */
 
 .footer {
@@ -104,6 +139,15 @@ body {
   color: #777;
   border-top: .05rem solid #e5e5e5;
 }
+
+
+
+
+
+
+
+
+
 
 
 

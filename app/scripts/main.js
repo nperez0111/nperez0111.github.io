@@ -18,14 +18,14 @@ window.browser = new Browser({
   template: '#browserTemplate',
   target: '#websites',
   data: function() {
-    return { page: window.pages }
+    return { page: window.pages, nextLabel: 'Website' }
   }
 })
 window.webapp = new Browser({
   template: '#browserTemplate',
   target: '#webapps',
   data: function() {
-    return { page: window.apps }
+    return { page: window.apps, nextLabel: 'Web App' }
   }
 })
 
