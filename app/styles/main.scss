@@ -1,7 +1,6 @@
 // bower:scss
 @import "bower_components/bootstrap/scss/bootstrap.scss";
 // endbower
-@import "./glyphicons.scss";
 @import "./browserView.scss";
 @import "./animation.scss";
 .profile-image {
@@ -17,11 +16,14 @@
 }
 
 .card-columns {
-  @include media-breakpoint-only(lg) {
-    column-count: 4;
+  @include media-breakpoint-only(sm) {
+    column-count: 2;
+  }
+  @include media-breakpoint-only(md) {
+    column-count: 3;
   }
   @include media-breakpoint-only(xl) {
-    column-count: 5;
+    column-count: 4;
   }
 }
 
@@ -69,12 +71,37 @@ picture {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Space out content a bit */
 
 body {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -132,6 +159,18 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* Custom page footer */
 
 .footer {
@@ -139,6 +178,18 @@ body {
   color: #777;
   border-top: .05rem solid #e5e5e5;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

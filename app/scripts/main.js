@@ -1,6 +1,9 @@
 Ractive.components.Card = Ractive.extend({
   template: '#cardTemplate'
 });
+Ractive.components.LiveDemo = Ractive.extend({
+  template: '#liveTemplate'
+});
 var Browser = Ractive.extend({
   goto: function(index) {
     var pages = this.get('page')

@@ -90,7 +90,7 @@
   </script>
   <script type="text/ractive" id='browserTemplate'>
     <div class="row">
-      <div class="browser col-8">
+      <div class="browser col-12 col-lg-8">
         <div class="browser-header">
           <div class="browser-btns">
             <div class="browser-btn closer"></div>
@@ -99,7 +99,7 @@
           </div>
           <ul class="tabs">
             {{#each page:i}}
-            <li class="tab {{i==current?'activer':''}}" on-click="goto(i)">{{#if faIcon}}<i class="fa fa-{{faIcon}}"></i>{{/if}} {{title}}<span class="closer">x</span></li>
+            <li class="tab {{i==current?'activer':''}}" on-click="goto(i)">{{#if faIcon}}<i class="fa fa-{{{faIcon}}}"></i>{{/if}} {{{title}}}<span class="closer">x</span></li>
             {{/each}}
           </ul>
         </div>
@@ -111,14 +111,20 @@
           <div class="button" on-click="alert(`You thought this actually worked???\nThat's funny`)"><i class="fa fa-bars"></i></div>
         </div>
         <div class="page">
-          {{{page[current].html}}} {{#if current==0}}
-          <button class="btn btn-primary mt-0" on-click="goto(1)">View next Website <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
-          {{/if}}
+          {{{page[current].html}}} {{#if page[current].liveDemo}}
+          <div class="alert alert-primary" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>This is a live version of {{{page[current].title}}}!</div>
+          <LiveDemo url="{{page[current].liveDemo.url}}">
+            {{/if}} {{#if current==0}}
+            <button class="btn btn-primary btn-large mt-0" on-click="goto(1)">View next Website <span class="fa fa-arrow-right" aria-hidden="true"></span></button>
+            {{/if}}
         </div>
       </div>
-      <div class="col-4 px-4 card-holder">
+      <div class="col-12 col-lg-4 px-4 card-holder">
         <Card title="{{{page[current].title}}}" subtitle="{{{page[current].subtitle}}}" text="{{{page[current].text}}}" tags="{{page[current].tags}}" link="{{page[current].projectURL}}" />
-        <button type="button" class='btn btn-primary mt-3' on-click="goto(current+1)">View next {{nextLabel}} <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></button>
+        <button type="button" class='btn btn-primary mt-3' on-click="goto(current+1)">View next {{nextLabel}} <span class="fa fa-arrow-right" aria-hidden="true"></span></button>
       </div>
     </div>
   </script>
@@ -126,11 +132,11 @@
     <div class="card">
       <div class="card-block">
         {{#if title&&title!=='false'}}
-        <h4 class="card-title">{{title}}</h4>{{/if}} {{#if subtitle&&subtitle!=='false'}}
+        <h4 class="card-title">{{{title}}}</h4>{{/if}} {{#if subtitle&&subtitle!=='false'}}
         <h6 class="card-subtitle mb-2 text-muted">{{{subtitle}}}</h6>{{/if}}
         <p class="card-text">{{{text}}}</p>
         {{#if link&&link!=='false'}}<a href="{{link}}" class="btn btn-primary float-right">
-                  See the Project <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>{{/if}}
+                  See the Project <span class="fa fa-arrow-right" aria-hidden="true"></span></a>{{/if}}
       </div>
       {{#if tags&&tags!=='false'}}
       <div class="card-footer">
@@ -146,11 +152,16 @@
         {{/each}}
     </div>
   </script>
+  <script type="text/ractive" id='liveTemplate'>
+    <div class="embed-responsive">
+      <iframe class="embed-responsive-item" src="{{url}}"></iframe>
+    </div>
+  </script>
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
-  <script src="/bower_components/ractive/ractive.min.js"></script>
   <script src="/bower_components/popper.js/dist/umd/popper.js"></script>
+  <script src="/bower_components/ractive/ractive.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
   <!-- build:js scripts/plugins.js -->
