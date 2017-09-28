@@ -52,6 +52,11 @@
   }
 }
 
+button .fa-arrow-right,
+a .fa-arrow-right {
+  transform: translateX(0px);
+}
+
 button:hover .fa-arrow-right,
 a:hover .fa-arrow-right {
   animation: point 1s infinite ease;
