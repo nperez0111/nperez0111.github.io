@@ -58,15 +58,26 @@ a .fa-arrow-right {
 }
 
 button:hover .fa-arrow-right,
-a:hover .fa-arrow-right {
-  animation: point 1s infinite ease;
-  -webkit-animation: point 1s infinite ease;
+a:hover .fa-arrow-right,
+.carousel-control-next:hover .carousel-control-next-icon,
+.carousel-control-next:hover .bg {
+  animation: point-right 1s infinite ease;
+  -webkit-animation: point-right 1s infinite ease;
   -webkit-animation-direction: alternate;
   /* Safari 4.0 - 8.0 */
   animation-direction: alternate;
 }
 
-@-webkit-keyframes point {
+.carousel-control-prev:hover .bg,
+.carousel-control-prev:hover .carousel-control-prev-icon {
+  animation: point-left 1s infinite ease;
+  -webkit-animation: point-left 1s infinite ease;
+  -webkit-animation-direction: alternate;
+  /* Safari 4.0 - 8.0 */
+  animation-direction: alternate;
+}
+
+@-webkit-keyframes point-right {
   0% {
     transform: translateX(0px);
   }
@@ -75,12 +86,30 @@ a:hover .fa-arrow-right {
   }
 }
 
-@keyframes point {
+@keyframes point-right {
   0% {
     transform: translateX(0px);
   }
   100% {
     transform: translateX(5px);
+  }
+}
+
+@-webkit-keyframes point-left {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes point-left {
+  0% {
+    transform: translateX(0px);
+  }
+  100% {
+    transform: translateX(-5px);
   }
 }
 

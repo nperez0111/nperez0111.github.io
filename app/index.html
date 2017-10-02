@@ -49,38 +49,44 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="container-fluid">
-    <ul class="nav nav-tabs center nav-fill mb-5" role="tablist">
-      <li class="nav-item">
-        <a class="nav-link active" href="#websites" role="tab" data-toggle="tab">Websites</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#webapps" role="tab" data-toggle="tab">Web Apps</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#npm" role="tab" data-toggle="tab">NPM Modules</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#scripts" role="tab" data-toggle="tab">Scripts &amp; Utilities</a>
-      </li>
-    </ul>
-    <!-- Tab panes -->
-    <div class="tab-content">
-      <div role="tabpanel" class="tab-pane fade active show" id="websites">
-      </div>
-      <div role="tabpanel" class="tab-pane fade" id="webapps">
-      </div>
-      <div role="tabpanel" class="tab-pane fade" id="npm">
-      </div>
-      <div role="tabpanel" class="tab-pane fade" id="scripts">
-        <div class="card-columns" id='scriptsContent'></div>
+    <div class="container-fluid">
+      <ul class="nav nav-tabs center nav-fill mb-5" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" href="#websites" role="tab" data-toggle="tab">Websites</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#webapps" role="tab" data-toggle="tab">Web Apps</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#npm" role="tab" data-toggle="tab">NPM Modules</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#scripts" role="tab" data-toggle="tab">Scripts &amp; Utilities</a>
+        </li>
+      </ul>
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade active show" id="websites">
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="webapps">
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="npm">
+        </div>
+        <div role="tabpanel" class="tab-pane fade" id="scripts">
+        </div>
       </div>
     </div>
-  </div>
-  <div class="footer">
-    <p>Made by Nick the Sick</p>
-  </div>
+    <div class="footer">
+      <div class="row">
+        <div class="col">
+          <h5>Made by Nick the Sick</h5>
+        </div>
+        <div class="col"><a href="mailto:nick@nickthesick.com"><span class="fa fa-envelope"></span> Nick@NickTheSick.com</a></div>
+        <div class="col"><a href="tel:3052828358"><span class="fa fa-phone"></span> (305)-282-8358</a></div>
+        <div class="col"><a href="https://github.com/nperez0111"><span class="fa fa-github"></span> My GitHub</a></div>
+        <div class="col"><a href="https://www.linkedin.com/in/nicholas-perez-215262124"><span class="fa fa-linkedin"></span> My LinkedIn</a></div>
+      </div>
+    </div>
   </div>
   <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
   <script>
@@ -150,7 +156,7 @@
   <script type="text/ractive" id='cardTemplate'>
     <div class="card">
       <div class="card-block">
-        {{#if title&&title!=='false'}}
+        {{#if image&&image!=='false'}}<img class="card-img-top" src="{{image}}" alt="Image of code.">{{/if}} {{#if title&&title!=='false'}}
         <h4 class="card-title">{{{title}}}</h4>{{/if}} {{#if subtitle&&subtitle!=='false'}}
         <h6 class="card-subtitle mb-2 text-muted">{{{subtitle}}}</h6>{{/if}}
         <p class="card-text">{{{text}}}</p>
@@ -159,7 +165,7 @@
       </div>
       {{#if tags&&tags!=='false'}}
       <div class="card-footer">
-        <small class="text-muted">Tags :</small> {{#each tags}} <span class='btn btn-outline-primary btn-sm m-1'>{{this}}</span> {{/each}}
+        <small class="text-muted">Tags :</small> {{#each tags}} <span class='btn btn-outline-primary btn-sm m-1'>{{this}} </span> {{/each}}
       </div>
       {{/if}}
     </div>
@@ -167,7 +173,7 @@
   <script type="text/ractive" id='npmTemplate'>
     <div class="card-columns" id="npm">
       {{#each items}}
-      <Card title={{{title}}} subtitle={{{subtitle}}} text={{{text}}} link={{{link}}} tags={{tags}}>
+      <Card title={{{title}}} subtitle={{{subtitle}}} text={{{text}}} link={{{link}}} tags={{tags}} image={{image}}>
         {{/each}}
     </div>
   </script>

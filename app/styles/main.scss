@@ -15,6 +15,7 @@
   padding: 0.2em 0;
 }
 
+
 .card-columns {
   @include media-breakpoint-down(sm) {
     column-count: 2;
@@ -79,28 +80,11 @@ picture {
 
 
 
-
-
-
-
-
-
-
-
 /* Space out content a bit */
 
 body {
   padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -115,33 +99,36 @@ body {
 
 
 
-
-
-
-
-
-
-
-
-
 /* Custom page footer */
 
 .footer {
-  padding-top: 1.5rem;
+  padding-top: 1rem;
+  margin-bottom: 0rem;
   color: #777;
   border-top: .05rem solid #e5e5e5;
 }
 
+$colors: #09da55,
+#BADA55,
+#0AcAa5,
+#B00CA7,
+#400CA7,
+#2A46a5,
+#10cC37,
+#2A76a5;
 
-
-
-
-
-
-
-
-
-
+@for $i from 1 through length($colors) {
+  .card:nth-child(#{length($colors)}n+#{$i}) .bgColor {
+    background: nth($colors, $i);
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h4 {
+      color: white;
+    }
+  }
+}
 
 
 /* Customize container */

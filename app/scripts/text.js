@@ -15,7 +15,8 @@ window.npm = [{
   subtitle: 'Transforms PoJos into other PoJos using PoJos.',
   text: 'This small utility library helps transform the format of Plain Ol\' JavaSctipt Objects into other JavaScript Objects. This is useful for tranforming an API result into a more desirable format.',
   link: 'https://github.com/nperez0111/object-manip',
-  tags: ['JS', 'JSON', 'PoJo', 'NPM']
+  tags: ['JS', 'JSON', 'PoJo', 'NPM'],
+  image: 'https://raw.githubusercontent.com/nperez0111/object-manip/master/carbon.png'
 }, {
   title: 'Trans.Form',
   subtitle: 'A Wrapper around object-manip to be used on any object to allow transformations.',
@@ -134,7 +135,12 @@ window.script = [{
 }]
 window.pages = [{
   link: 'http://nickthesick.com',
-  html: '<div class="jumbotron jumbotron-fluid mb-0 nick"><div class="container"><h2 class="display-3">Welcome to the Nick the Sick Portfolio Website!</h2><p class="lead">To see some of my other work, click on the tabs of the browser window or click the "View next Website" button</p></div></div>',
+  html: `<div class="jumbotron jumbotron-fluid mb-0 nick">
+  <div class="container">
+  <h2 class="display-5">Welcome to the Nick the Sick Portfolio Website!</h2>
+  <p class="lead">To see some of my other work, click on the arrows to the left and right of this.</p>
+  </div>
+  </div>`,
   projectURL: 'http://nickthesick.com',
   tags: ['Website', 'Awesome', 'Cool'],
   title: 'Nick the Sick Portfolio Website',
