@@ -80,11 +80,13 @@ picture {
 
 
 
+
 /* Space out content a bit */
 
 body {
   padding-top: 1.5rem;
 }
+
 
 
 
@@ -96,6 +98,7 @@ body {
   padding-right: 1rem;
   padding-left: 1rem;
 }
+
 
 
 
@@ -129,6 +132,40 @@ $colors: #09da55,
     }
   }
 }
+
+button,
+a,
+.carousel-control-prev,
+.carousel-control-next {
+  .fa-arrow-right,
+  .fa-arrow-left,
+  .carousel-control-next-icon,
+  .carousel-control-prev-icon,
+  .bg {
+    transform: translateX(0px);
+    transition: all 300ms ease;
+  }
+  &:hover {
+    .fa-arrow-right,
+    .carousel-control-next-icon,
+    .bg {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.carousel-control-prev,
+button,
+a {
+  &:hover {
+    .bg,
+    .carousel-control-prev-icon,
+    .fa-arrow-left {
+      transform: translateX(-5px);
+    }
+  }
+}
+
 
 
 /* Customize container */

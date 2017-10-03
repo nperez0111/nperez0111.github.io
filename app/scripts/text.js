@@ -1,4 +1,10 @@
 window.npm = [{
+  title: 'Why write these modules?',
+  subtitle: 'false',
+  text: 'I love the idea of <a href="https://github.com/sindresorhus/ama/issues/10#issuecomment-117766328">small modules</a> that <a href="https://github.com/sindresorhus">Sindre Sorhus</a> describes because why write something that you will probably use again or copy and paste in when you can just add it as a module? Wasn\'t that the point of modules in the first place? ',
+  link: 'false',
+  tags: 'false'
+}, {
   tags: ['JS', 'NPM', 'Proxies'],
   link: 'https://github.com/nperez0111/proxify-objects',
   title: 'Proxify-Objects',
@@ -16,7 +22,7 @@ window.npm = [{
   text: 'This small utility library helps transform the format of Plain Ol\' JavaSctipt Objects into other JavaScript Objects. This is useful for tranforming an API result into a more desirable format.',
   link: 'https://github.com/nperez0111/object-manip',
   tags: ['JS', 'JSON', 'PoJo', 'NPM'],
-  image: 'https://raw.githubusercontent.com/nperez0111/object-manip/master/carbon.png'
+  //image: 'https://raw.githubusercontent.com/nperez0111/object-manip/master/carbon.png'
 }, {
   title: 'Trans.Form',
   subtitle: 'A Wrapper around object-manip to be used on any object to allow transformations.',
@@ -29,12 +35,6 @@ window.npm = [{
   text: 'This small utility library puts the same methods ObjExtension does but does so in a less awkward way where you can directly use the method as if it were a key on the object itself.',
   link: 'https://github.com/nperez0111/object-proxified',
   tags: ['JS', 'JSON', 'PoJo', 'NPM']
-}, {
-  title: 'Why write these modules?',
-  subtitle: 'false',
-  text: 'I love the idea of <a href="https://github.com/sindresorhus/ama/issues/10#issuecomment-117766328">small modules</a> that <a href="https://github.com/sindresorhus">Sindre Sorhus</a> describes because why write something that you will probably use again or copy and paste in when you can just add it as a module? Wasn\'t that the point of modules in the first place? ',
-  link: 'false',
-  tags: 'false'
 }, {
   title: 'React-Native-Sketch',
   subtitle: 'A react-native component for touch-based drawing with an ability to draw over the images.',
@@ -79,6 +79,12 @@ window.npm = [{
   tags: ['JS', 'NPM']
 }]
 window.script = [{
+  title: 'Why write these scripts?',
+  subtitle: 'false',
+  text: 'Sometimes when you are a programmer you see something that can be useful to other people and decide to make it because you know that even if nobody uses it you probably will in the future.',
+  link: 'false',
+  tags: 'false'
+}, {
   title: 'Pianobar-Installer',
   subtitle: 'These scripts help install <a href="https://github.com/PromyLOPh/pianobar">Pianobar</a> (A Command Line Pandora Player) onto Windows and Mac OS X. For Mac I\'ve written a bash script that can be copied and pasted into a terminal emulator of your choice to install pianobar and fix some settings.',
   text: 'I wrote this script as a simple way to setup my CLI Pandora player application. I wrote two versions of it a simple install that would just install the CLI and then I made an Advanced install that would show notifications on change of song.',
@@ -96,12 +102,6 @@ window.script = [{
   text: 'I wrote this script as a way to interact with Pianobar purely through JavaScript, some can use this to make a GUI interface for Pianobar while I chose to leave it as a way to send notifications as that is how I like my setup.',
   link: 'https://github.com/nperez0111/pianobar-notifier',
   tags: ['JS', 'CLI', 'Notifications', 'Mac OS X']
-}, {
-  title: 'Why write these scripts?',
-  subtitle: 'false',
-  text: 'Sometimes when you are a programmer you see something that can be useful to other people and decide to make it because you know that even if nobody uses it you probably will in the future.',
-  link: 'false',
-  tags: 'false'
 }, {
   title: 'Search-Engine',
   subtitle: 'This is a search engine that I wrote in Java for CS212 at University of San Francisco.',
@@ -137,8 +137,13 @@ window.pages = [{
   link: 'http://nickthesick.com',
   html: `<div class="jumbotron jumbotron-fluid mb-0 nick">
   <div class="container">
-  <h2 class="display-5">Welcome to the Nick the Sick Portfolio Website!</h2>
+  <h2 class="display-3">Welcome to the Nick the Sick Portfolio Website!</h2>
   <p class="lead">To see some of my other work, click on the arrows to the left and right of this.</p>
+  </div>
+  </div>
+  <div class="container-fluid">
+  <div class="row">
+
   </div>
   </div>`,
   projectURL: 'http://nickthesick.com',
