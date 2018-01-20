@@ -1,3 +1,5 @@
+'use strict';
+
 window.npm = [{
   title: 'Why write these modules?',
   subtitle: 'false',
@@ -21,7 +23,7 @@ window.npm = [{
   subtitle: 'Transforms PoJos into other PoJos using PoJos.',
   text: 'This small utility library helps transform the format of Plain Ol\' JavaSctipt Objects into other JavaScript Objects. This is useful for tranforming an API result into a more desirable format.',
   link: 'https://github.com/nperez0111/object-manip',
-  tags: ['JS', 'JSON', 'PoJo', 'NPM'],
+  tags: ['JS', 'JSON', 'PoJo', 'NPM']
   //image: 'https://raw.githubusercontent.com/nperez0111/object-manip/master/carbon.png'
 }, {
   title: 'Trans.Form',
@@ -77,7 +79,7 @@ window.npm = [{
   text: 'I made a game playing AI, in order for the AI to not fall into a loop of making the same moves I made this library so I know the next move will be different than the ones prior(No matter how long of a cycle of moves).',
   link: 'https://github.com/nperez0111/isCyclical',
   tags: ['JS', 'NPM']
-}]
+}];
 window.script = [{
   title: 'Why write these scripts?',
   subtitle: 'false',
@@ -132,20 +134,10 @@ window.script = [{
   text: 'This scrapes the University of San Francisco job bulletin and outputs it as JSON into your terminal.',
   link: 'https://github.com/nperez0111/usfjobfinder',
   tags: ['JS']
-}]
+}];
 window.pages = [{
   link: 'http://nickthesick.com',
-  html: `<div class="jumbotron jumbotron-fluid mb-0 nick">
-  <div class="container">
-  <h2 class="display-3">Welcome to the Nick the Sick Portfolio Website!</h2>
-  <p class="lead">To see some of my other work, click on the arrows to the left and right of this.</p>
-  </div>
-  </div>
-  <div class="container-fluid">
-  <div class="row">
-
-  </div>
-  </div>`,
+  html: '<div class="jumbotron jumbotron-fluid mb-0 nick">\n  <div class="container">\n  <h2 class="display-3">Welcome to the Nick the Sick Portfolio Website!</h2>\n  <p class="lead">To see some of my other work, click on the arrows to the left and right of this.</p>\n  </div>\n  </div>\n  <div class="container-fluid">\n  <div class="row">\n\n  </div>\n  </div>',
   projectURL: 'http://nickthesick.com',
   tags: ['Website', 'Awesome', 'Cool'],
   title: 'Nick the Sick Portfolio Website',
@@ -188,7 +180,7 @@ window.pages = [{
   text: 'This is a simple website used to get in contact with Adasi Developers and to showcase their great work.<p><div class="alert alert-primary" role="alert">This is actually a live demo!</div>',
   faIcon: 'cogs',
   liveDemo: { url: 'http://adasibuilt.com' }
-}]
+}];
 window.apps = [{
   link: 'http://sas.nickthesick.com',
   html: '<picture> <source srcset="http://nickthesick.com/images/sasBig.jpg" media="(min-width: 1000px)"> <source srcset="http://nickthesick.com/images/sasMed.jpg" media="(min-width: 800px)"> <img srcset="http://nickthesick.com/images/sasSmall.jpg" alt="Image of the School for advanced Studies Web App to choose courses within Miami Dade College just a little simpler."> </picture>',
@@ -196,9 +188,7 @@ window.apps = [{
   tags: ['JS', 'PHP', 'Ractive.js', 'Scraper', 'Web App'],
   title: 'SAS Web-App',
   subtitle: 'SAS Dual Enrollment Course Picker Web App',
-  text: `I went to a high school that you would take college courses at the same time as your high school courses. So every semester we would pick our college courses as a college student would but since we were high school students we were restricted in which courses we could take and did not really have much knowledge of courses that would be useful to our future. 
-I was very frustrated with the process of picking courses as it required cross examining multiple documents in order to find the courses that we could take versus what it is that we needed and would be helpful. So I set out to make it easier for the students in my school by compiling everything into a website that would help you pick courses and give current info such as available times for the classes. The website basically gave you everything you needed to pick courses and would even help you pick classes as it had a course picker built in that given your prior classes would suggest classes you should take given what is necessary to graduate with an A.A.
-So out of my frustration, I made this web app to scrape my college's website in order to get course times and course descriptions and it was a success, students are still using my website to pick classes to this day even after I graduated.`,
+  text: 'I went to a high school that you would take college courses at the same time as your high school courses. So every semester we would pick our college courses as a college student would but since we were high school students we were restricted in which courses we could take and did not really have much knowledge of courses that would be useful to our future. \nI was very frustrated with the process of picking courses as it required cross examining multiple documents in order to find the courses that we could take versus what it is that we needed and would be helpful. So I set out to make it easier for the students in my school by compiling everything into a website that would help you pick courses and give current info such as available times for the classes. The website basically gave you everything you needed to pick courses and would even help you pick classes as it had a course picker built in that given your prior classes would suggest classes you should take given what is necessary to graduate with an A.A.\nSo out of my frustration, I made this web app to scrape my college\'s website in order to get course times and course descriptions and it was a success, students are still using my website to pick classes to this day even after I graduated.',
   faIcon: 'graduation-cap'
 }, {
   link: 'http://onswee.nickthesick.com',
@@ -224,8 +214,7 @@ So out of my frustration, I made this web app to scrape my college's website in 
   tags: ['JS', 'Ractive.js', 'Web App'],
   title: 'How Wide Is It',
   subtitle: 'Tells you how wide a monitor is when given the diagonal measurement and aspect ratio.',
-  text: `The purpose of this Web Application is to help with the odd scenario of buying a TV that you need to fit into a certain amount of space, I'll explain. So a TV is typically measured diagonally (for instance a 40" TV) but that diagonal length doesn't tell you how it will fit into a tv cabinet (which is only of a certain length).</p>
-<p>So, the purpose of this web app is that you give it the diagonal length of your monitor (and aspect ratio if specified) and it will tell you the length and width of that TV so that you can see whether that TV will fit the cabinet properly.</p><p><div class="alert alert-primary" role="alert">This is actually a live demo!</div>`,
+  text: 'The purpose of this Web Application is to help with the odd scenario of buying a TV that you need to fit into a certain amount of space, I\'ll explain. So a TV is typically measured diagonally (for instance a 40" TV) but that diagonal length doesn\'t tell you how it will fit into a tv cabinet (which is only of a certain length).</p>\n<p>So, the purpose of this web app is that you give it the diagonal length of your monitor (and aspect ratio if specified) and it will tell you the length and width of that TV so that you can see whether that TV will fit the cabinet properly.</p><p><div class="alert alert-primary" role="alert">This is actually a live demo!</div>',
   faIcon: 'expand',
   liveDemo: { url: 'http://howwide.nickthesick.com/' }
 }, {
@@ -246,4 +235,5 @@ So out of my frustration, I made this web app to scrape my college's website in 
   subtitle: 'Created to prefill a form to be imported into QuickBooks',
   text: 'This is a simple tool that prefills a Microsoft Word document with data to be imported in QuickBooks while maintaining its style because QuickBooks is very picky about the format of the file it imports.',
   faIcon: 'file-word-o'
-}]
+}];
+//# sourceMappingURL=text.js.map

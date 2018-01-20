@@ -1,8 +1,6 @@
-// bower:scss
-@import "bower_components/bootstrap/scss/bootstrap.scss";
-// endbower
-@import "./browserView.scss";
-@import "./animation.scss";
+@import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "./browser.scss";
+@import "./animations.scss";
 .profile-image {
   border-radius: 50%;
   max-width: 250px;
@@ -81,11 +79,17 @@ picture {
 
 
 
+
+
+
 /* Space out content a bit */
 
 body {
   padding-top: 1.5rem;
 }
+
+
+
 
 
 
@@ -98,6 +102,9 @@ body {
   padding-right: 1rem;
   padding-left: 1rem;
 }
+
+
+
 
 
 
@@ -165,6 +172,9 @@ a {
     }
   }
 }
+
+
+
 
 
 
