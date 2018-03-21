@@ -1,8 +1,8 @@
 {
   "name": "nickthesick.com",
   "version": "1.0.0",
-  "description": "Nick the Sick Personal Web Site",
-  "author": "Nick The Sick <nperez0111@gmail.com>",
+  "description": "Website for Nick the Sick",
+  "author": "Nick Perez <nperez0111@gmail.com>",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -11,15 +11,11 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
-    "bootstrap": "^4.0.0",
-    "jquery": "^3.3.1",
-    "nuxt": "^1.0.0-rc11",
-    "popper.js": "^1.12.9",
-    "vuetify": "^0.16.9"
+    "nuxt": "^1.0.0",
+    "vuetify": "^1.0.0"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
-    "babel-plugin-transform-imports": "^1.4.1",
     "eslint": "^4.3.0",
     "eslint-config-standard": "^10.2.1",
     "eslint-loader": "^1.9.0",
@@ -28,10 +24,7 @@
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
-    "node-sass": "^4.7.2",
-    "sass-loader": "^6.0.6",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.1",
-    "vuetify-loader": "^0.1.0"
+    "stylus-loader": "^3.0.1"
   }
 }

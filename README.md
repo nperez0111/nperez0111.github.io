@@ -1,6 +1,6 @@
 # nickthesick.com
 
-> Nick the Sick Personal Web Site
+> Website for Nick the Sick
 
 ## Build Setup
 
